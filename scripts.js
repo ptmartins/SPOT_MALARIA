@@ -1,52 +1,59 @@
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
+(function() {
+  var prevBtn = document.getElementById('prevBtn'),
+      nextBtn = document.getElementById('nextBtn'),
+      submitBtn = document.getElementById('submitBtn'),
+      tabs = document.getElementsByClassName('tab'),
+      dots = document.getElementsByClassName('step'),
+      currentTab = 0;
 
-function showTab(n) {  
-  // This function will display the specified tab of the form ...
-  var x = document.getElementsByClassName("tab");
-
-  x[n].style.display = "block";
-  // ... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("navPrev").style.display = "none";
-  } else {
-    document.getElementById("navPrev").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
-    document.getElementById("navNext").innerHTML = "Submit";
-  } else {
-    document.getElementById("navNext").innerHTML = "Next";
-  }
-  // ... and run a function that displays the correct step indicator:
-  fixStepIndicator(n);
-}
-
-function nextPrev(n) {
-    console.log(n);
-    console.log(currentTab);
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-  // Exit the function if any field in the current tab is invalid:
-//   if (n == 1) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form... :
-  if (currentTab >= x.length) {
-    //...the form gets submitted:
-    document.getElementById("regForm").submit();
-  }
-  // Otherwise, display the correct tab:
   showTab(currentTab);
-}
 
-function fixStepIndicator(n) { 
-    // This function removes the "active" class of all steps...
-    var i, x = document.getElementsByClassName("step");
-    for (i = 0; i < x.length; i++) {
-      x[i].className = x[i].className.replace(" active", "");
-    }
-    //... and adds the "active" class to the current step:
-    x[n].className += " active";
+  for (var i = 0; i < dots.length; i++) {
+    dots[i].addEventListener('click', function () {
+      var tab = this.dataset.tab;
+      showTab(tab);
+    });
   }
+
+  nextBtn.addEventListener('click', function () {
+    currentTab += parseInt(this.dataset.nav);
+    showTab(currentTab);
+  });
+
+  prevBtn.addEventListener('click', function () {
+    currentTab += parseInt(this.dataset.nav);
+    showTab(currentTab);
+  });
+
+  function showTab(tab) {
+    hideTabs();
+
+    if (tab === 0) {
+      prevBtn.style.display = 'none';
+    } else if (tab === tabs.length - 1) {
+      nextBtn.style.display = 'none';
+      submitBtn.style.display = 'inline-block';
+    } else {
+      tabs[tab].style.display = 'none';
+      prevBtn.style.display = 'inline-block';
+      nextBtn.style.display = 'inline-block';
+      if(submitBtn.style.display === "inline-block") {
+        submitBtn.style.display = "none";
+      }
+    }
+
+    tabs[tab].style.display = 'block';
+    dots[tab].classList.add('active');
+  }
+
+  function hideTabs() {
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].style.display = 'none';
+      dots[i].classList.remove('active');
+    }
+
+  }
+})();
+
+
+

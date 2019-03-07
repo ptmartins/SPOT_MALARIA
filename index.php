@@ -25,7 +25,7 @@
                     <!-- FORM-BODY -->
                     <div class="form-body">
                         <!-- INTRO -->
-                        <div id="tabIntro" class="tab tab--intro">
+                        <div id="tabIntro" class="tab tab--intro" data-tab="0">
                             <h2>Intro</h2>
                             <p>Spot Malaria aims to bring together malaria genetics with epidemiological information across both time and space. The project has two distinct but complementary goals;
                             <ul>
@@ -36,7 +36,7 @@
                             </p>
                         </div>
                         <!-- PEOPLE INFORMATION -->
-                        <div id="tabPeople" class="tab tab--people">
+                        <div id="tabPeople" class="tab tab--people" data-tab="1">
                             <div>
                                 <h2 class="formBlock-title">People Information</h2>
                                 <p class="formBlock-helpText">Please provide details of relevant stakeholders for this study. This information can be added to at a later stage.</p>
@@ -87,7 +87,7 @@
                             </div>                
                         </div>
                         <!-- STUDY INFORMATION -->
-                        <div id="tabStudyInfo" class="tab tab--studyInfo">
+                        <div id="tabStudyInfo" class="tab tab--studyInfo" data-tab="2">
                                 <h2 class="formBlock-title">Study Information</h2>
                                 <p class="formBlock-helpText">Please provide details about the study that was conducted to generate the samples.</p>
                             <div class="form-group">
@@ -96,12 +96,12 @@
                             </div>
                         </div>
                         <!-- SAMPLE INFORMATION INTRO -->
-                        <div id="tabSampleInfoIntro" class="tab tab--sampleInfoIntro">
+                        <div id="tabSampleInfoIntro" class="tab tab--sampleInfoIntro" data-tab="3">
                             <h2 class="formBlock-title">Sample Information</h2>
                             <p class="formBlock-helpText">Please comple the relevant sections for your study.</p>
                         </div>
                         <!-- SAMPLE INFORMATION DBS-->
-                        <div id="tabSampleInfoDBS" class="tab tab--sampleInfoDBS">
+                        <div id="tabSampleInfoDBS" class="tab tab--sampleInfoDBS" data-tab="4">
                             <h2>Dried Blood Spots (DBS) collected from malaria cases</h2>
                             <div class="form-group">
                                 <p>
@@ -131,7 +131,7 @@
                             </div>
                             <div class="form-group">
                                 <p>
-                                    MMultiple samples from same patient?
+                                    Multiple samples from same patient?
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
                                         <label class="form-check-label" for="inlineCheckbox1">Yes</label>
@@ -144,7 +144,7 @@
                             </div>
                             <div class="form-group">
                                 <p>
-                                    Samples collected using protocol we provide?2
+                                    Samples collected using protocol we provide?
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
                                         <label class="form-check-label" for="inlineCheckbox1">Yes</label>
@@ -157,7 +157,7 @@
                             </div>
                         </div>
                         <!-- SAMPLE INFORMATION PARASITE DNA-->
-                        <div id="tabSampleInfoDNA" class="tab tab--sampleInfoDNA">
+                        <div id="tabSampleInfoDNA" class="tab tab--sampleInfoDNA" data-tab="5">
                             <h2>Extracted Parasite DNA</h2>
                             <div class="form-group">
                                 <p>
@@ -213,7 +213,7 @@
                             </div>
                         </div>
                         <!-- ALL SAMPLES -->
-                        <div id="tabAllSamples" class="tab tab--allSamples">
+                        <div id="tabAllSamples" class="tab tab--allSamples" data-tab="6">
                             <h2>All Samples</h2>
                             <p>Every sample submitted to the Sanger Malaria Programme for genetic analysis and to MalariaGEN Projects must: </p>
                             <ul>
@@ -226,15 +226,18 @@
                     <div class="form-footer">
                         <!-- STEPS -->
                         <div class="steps">
-                            <span class="step"></span>
-                            <span class="step"></span>
-                            <span class="step"></span>
-                            <span class="step"></span>
+                            <span class="step" data-tab="0"></span>
+                            <span class="step" data-tab="1"></span>
+                            <span class="step" data-tab="2"></span>
+                            <span class="step" data-tab="3"></span>
+                            <span class="step" data-tab="4"></span>
+                            <span class="step" data-tab="5"></span>
+                            <span class="step" data-tab="6"></span>
                         </div>
                         <!-- NAVIGATION -->
                         <div class="navSubmit">
-                            <button id="navPrev" type="button" class="btn navPrev" onclick="nextPrev(-1)">Previous</button>
-                            <button id="navNext" type="button" class="btn navNext" onclick="nextPrev(1)">Next</button>
+                            <button id="prevBtn" type="button" class="btn navPrev" data-nav="-1">Previous</button>
+                            <button id="nextBtn" type="button" class="btn navNext" data-nav="1">Next</button>
                             <input id="submitBtn" class="submitBtn" type="submit">
                         </div>
                     </div>
@@ -246,7 +249,7 @@
             <div class="col-md-8 offset-md-2">
                 <div class="footer-info">
                     <h2>Key Information</h2>
-                    <p>The Sanger Malaria Programme working through the MalariaGEN collaborative framework is committed to integrating genetic and epidemiological data to understand the evolutionary changes in malaria relevant genomes (human, parasite and vector) particularly in response to control measures. By partnering with research and public health programmes operating in endemic regions through the Spot Malaria Project we are committed to producing actionable knowledge for the purpose of controlling and eliminating malaria.</p>
+                    <p>The Wellcome Sanger Institute (WSI) Parasites and Microbes Programme working through the MalariaGEN collaborative framework is committed to integrating genetic and epidemiological data to understand the evolutionary changes in malaria relevant genomes (human, parasite and vector) particularly in response to control measures. By partnering with research and public health programmes operating in endemic regions through the Spot Malaria Project we are committed to producing actionable knowledge for the purpose of controlling and eliminating malaria.</p>
                 </div>
                 <div class="footer-logos">
                 </div>
