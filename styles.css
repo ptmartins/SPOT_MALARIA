@@ -30,6 +30,33 @@ p {
     margin-bottom: 20px;
 }
 
+p > span {
+    font-weight: bold;
+}
+
+.btn,
+input[type="submit"] {
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 10px 16px;
+    min-width: 86px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all .2s ease-in;
+}
+
+.btn.disabled,
+input[type="submit"].disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
 
 .label {
     background-color: #fff;
@@ -37,11 +64,21 @@ p {
     font-weight: bold;
     font-size: 11px;
     margin-bottom: 0;
-    position: relative;
+    position: absolute;
     left: 15px;
-    bottom: 15px;
+    top: -10px;
     padding: 0 10px;
     z-index: 10;
+    display: inline-block;
+}
+
+.form-list {
+    list-style: square outside none;
+    margin-bottom: 20px; 
+}
+
+.form-listItem {
+    padding-left: 1.5rem;
 }
 
 .form-group-wrapper {
@@ -51,7 +88,7 @@ p {
 }
 
 .section-title {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 10px;
     width: 100%;
 } 
@@ -66,6 +103,21 @@ p {
     position: relative;
     min-height: 42px;
     margin-bottom: 20px;
+}
+
+.form-group--textArea {
+    flex-grow: 1;
+}
+
+.form-subGroup {
+    font-size: 0;
+    width: 48%;
+}
+
+.form-subGroup-title {
+    font-size: 16px;
+    color: #5e5e5e;
+    text-align: center;
 }
 
 .form-control {
@@ -83,7 +135,9 @@ p {
     color: #aeaeae;
 }
 
-
+.form-check {
+    display: inline-block;
+}
 
 .container-main {
     display: flex;
@@ -118,9 +172,9 @@ p {
     flex-direction: column;
     width: 200px;
     flex-shrink: 0;
-    background-color: #000;
-    color: #fff;
+    color: #333;
     margin-bottom: 0;
+    border-right: 1px solid #e3e3e3;
 }
 
 .sideNav-item {
@@ -128,9 +182,10 @@ p {
     font-weight: bold;
     font-size: 18px;
     padding: 1rem;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #e3e3e3;
     position: relative;
     cursor: pointer;
+    user-select: none;
 }
 
 .sideNav-item::before {
@@ -145,23 +200,38 @@ p {
     transition: all .2s ease-in;
 }
 
-.sideNav-item:hover::before {
-    opacity: 1;
-}
-
 .sideNav-item.active::before {
     opacity:1;
-    background-color: #ca0000;
+    background-color: #000;
 }
 
-.sideNav-item.active > span {
-    color: #ca0000;
+.sideNav-item:first-child.active::before {
+    border-top-left-radius: 10px;
 }
+
+.sideNav-logos {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.sideNav-logos img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+    align-self: center;
+    margin-bottom: 15px;
+}
+
 
 .form-content {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
+
+
 
 /* FORM HEADER */
 .form-header {
@@ -195,6 +265,41 @@ p {
     display: none;
     height: calc(100% - 3rem);
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab--sampleInfoIntro {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+}
+
+.tab--sampleInfoIntro .formBlock-helpText {
+    width: 100%;
+}
+
+.tab--sampleInfoIntro .form-group,
+.tab--allSamples .form-group  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 48%;
+    padding-top: 10px;
+}
+
+.tab--allSamples .form-group {
+    width: 100%
+}
+
+.tab--sampleInfoIntro .form-check {
+    width: 50%;
+    text-align: center;
+}
+
+.tab--sampleInfoIntro .form-check-label {
+    font-size: 14px;
 }
 
 
@@ -220,6 +325,7 @@ p {
 }
 
 
+
 /* NAVIGATION */
 .navSubmit {
     position: absolute;
@@ -232,19 +338,48 @@ p {
     display: none;
 }
 
+.help {
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
 
+.help-text {
+    height: auto;
+    max-height: 0;
+    transition: all .3s ease-in;
+    overflow: hidden;
+}
+
+.help-text.show{
+    max-height: 1000px;
+}
+
+.footNote {
+    font-size: 11px;
+}
 
 /* FOOTER */
-.row--footer{
+.footer{
     border-top: 1px solid #cecece;
-    font-size: 10px;
     padding: 1rem;
     position: fixed;
     bottom: 0;
     background-color: rgba(227, 229, 236, 0.6);
+    width: 100%;
 }
 
-.row--footer h2 {
+.footer-container {
+    width:60vw;
+    min-width: 800px;
+    margin: 0 auto;
+} 
+
+.footer h2 {
     font-size: 16px;
     font-weight: bold;
+}
+
+.footer p {
+    font-size: 11px;
 }

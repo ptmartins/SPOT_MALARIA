@@ -5,6 +5,7 @@
       tabs = document.getElementsByClassName('tab'),
       folders = document.getElementsByClassName('folder'),
       titleFolder = document.getElementById('title-folder'),
+      helpLinks = document.getElementsByClassName('help'),
       currentTab = 0;
 
   showTab(currentTab);
@@ -16,6 +17,10 @@
     });
   }
 
+  for (var i = 0; i < helpLinks.length; i++) {
+    helpLinks[i].addEventListener('click', showHelpText);
+  }
+
   nextBtn.addEventListener('click', function () {
     currentTab += parseInt(this.dataset.nav);
     showTab(currentTab);
@@ -25,6 +30,11 @@
     currentTab += parseInt(this.dataset.nav);
     showTab(currentTab);
   });
+
+  function showHelpText() {
+    var content = this.nextElementSibling;
+    content.classList.toggle('show');
+  }
 
   function showTab(tab) {
     hideTabs();
@@ -44,7 +54,7 @@
       }
     }
 
-    tabs[tab].style.display = 'block';
+    tabs[tab].style.display = 'flex';
     folders[tab].classList.add('active');
 
     currentTab = tab;

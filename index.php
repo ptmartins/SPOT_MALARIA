@@ -15,15 +15,22 @@
             <div class="col-md-8 offset-md-2">
                 <!-- FORM -->
                 <form class="formContainer">
-                    <ul class="form-sideNav">
-                        <li class="sideNav-item folder" data-tab="0"><span>1. </span> Intro</li>
-                        <li class="sideNav-item folder" data-tab="1"><span>2. </span> People Information</li>
-                        <li class="sideNav-item folder" data-tab="2"><span>3. </span> Study information</li>
-                        <li class="sideNav-item folder" data-tab="3"><span>4. </span> Sample Information</li>
-                        <li class="sideNav-item folder" data-tab="4"><span>5. </span> X</li>
-                        <li class="sideNav-item folder" data-tab="5"><span>6. </span> Y</li>
-                        <li class="sideNav-item folder" data-tab="6"><span>7. </span> Z</li>
-                    </ul>   
+                    <div class="form-sideNav">
+                        <ul class="sideNav-list">
+                            <li class="sideNav-item folder" data-tab="0"><span>1. </span> Intro</li>
+                            <li class="sideNav-item folder" data-tab="1"><span>2. </span> People Information</li>
+                            <li class="sideNav-item folder" data-tab="2"><span>3. </span> Study information</li>
+                            <li class="sideNav-item folder" data-tab="3"><span>4. </span> Sample Info - DBS</li>
+                            <li class="sideNav-item folder" data-tab="4"><span>5. </span> Sample Info - DNA</li>
+                            <li class="sideNav-item folder" data-tab="5"><span>6. </span> All Samples</li>
+                            <li class="sideNav-item folder" data-tab="6"><span>7. </span> Data returned</li>
+                            <li class="sideNav-item folder" data-tab="7"><span>8. </span> Data published</li>
+                        </ul>
+                        <div class="sideNav-logos">
+                            <img src="SpotMalaria-logo.jpg" alt="Spot Malaria Logo" title="Spot Malaria">
+                            <img src="logo.svg" alt="MalariaGen Logo" title="MalariaGen" >
+                        </div>
+                    </div>   
                     <div class="form-content">
                         <!-- FORM-HEADER -->
                         <div class="form-header">
@@ -102,37 +109,47 @@
                             </div>
                             <!-- STUDY INFORMATION -->
                             <div id="tabStudyInfo" class="tab tab--studyInfo" data-tab="2" data-title="Study Information">
-                                    <!-- <h2 class="formBlock-title">Study Information</h2> -->
-                                    <p class="formBlock-helpText">Please provide details about the study that was conducted to generate the samples.</p>
+                                <p class="formBlock-helpText">Please provide details about the study that was conducted to generate the samples.</p>
                                 <div class="form-group">
-                                    <label for="study_description">Study Title</label>
+                                    <label for="study_description" class="label">Study Title</label>
+                                    <input type="text" name="study_description" id="" class="form-control" cols="30" rows="10"></textarea>
+                                </div>
+                                <div class="form-group form-group--textArea">
+                                    <label for="study_description" class="label">Study Description</label>
                                     <textarea name="study_description" id="" class="form-control" cols="30" rows="10"></textarea>
                                 </div>
                             </div>
                             <!-- SAMPLE INFORMATION INTRO -->
-                            <div id="tabSampleInfoIntro" class="tab tab--sampleInfoIntro" data-tab="3" data-title="Sample Information">
-                                <!-- <h2 class="formBlock-title">Sample Information</h2> -->
+                            <div id="tabSampleInfoIntro" class="tab tab--sampleInfoIntro" data-tab="3" data-title="Sample Info - DBS">   
                                 <p class="formBlock-helpText">Please comple the relevant sections for your study.</p>
-                            </div>
-                            <!-- SAMPLE INFORMATION DBS-->
-                            <div id="tabSampleInfoDBS" class="tab tab--sampleInfoDBS" data-tab="4">
-                                <h2>Dried Blood Spots (DBS) collected from malaria cases</h2>
+
                                 <div class="form-group">
-                                    <p>
-                                        Malaria confirmed by RDT?
+                                    <p class="label">Malaria confirmed by RDT? </p>
+                                    <div class="form-subGroup form-subGroup--dbs">
+                                        <h3 class="form-subGroup-title">Dried Blood Spots (DBS)</h3>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                            <input class="form-check-input" type="radio" name="malaria-confirmed-dbs" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for=""malaria-confirmed-dbs"">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                            <input class="form-check-input" type="radio" name="malaria-confirmed-dbs" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for=""malaria-confirmed-dbs"">No</label>
                                         </div>
-                                    </p>
+                                    </div>
+                                    <div class="form-subGroup form-subGroup--dna">
+                                        <h3 class="form-subGroup-title">Extracted Parasite DNA</h3>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="malaria-confirmed-dna" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="malaria-confirmed-dna">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="malaria-confirmed-dna" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="malaria-confirmed-dna">No</label>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <p>
-                                        Parasitaemia estimated by microscopy?
+                                    <p class="label">Parasitaemia estimated by microscopy? </p> 
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
                                             <label class="form-check-label" for="inlineCheckbox1">Yes</label>
@@ -141,108 +158,153 @@
                                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
                                             <label class="form-check-label" for="inlineCheckbox2">No</label>
                                         </div>
-                                    </p>
                                 </div>
                                 <div class="form-group">
-                                    <p>
-                                        Multiple samples from same patient?
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                        </div>
-                                    </p>
+                                    <p class="label">Multiple samples from same patient? </p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                    </div>  
                                 </div>
                                 <div class="form-group">
-                                    <p>
-                                        Samples collected using protocol we provide?
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                        </div>
-                                    </p>
+                                    <p class="label">Samples collected using protocol we provide?</p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                    </div>   
                                 </div>
                             </div>
                             <!-- SAMPLE INFORMATION PARASITE DNA-->
-                            <div id="tabSampleInfoDNA" class="tab tab--sampleInfoDNA" data-tab="5">
+                            <div id="tabSampleInfoDNA" class="tab tab--sampleInfoDNA" data-tab="4" data-title="Sample Info - DNA">
                                 <h2>Extracted Parasite DNA</h2>
                                 <div class="form-group">
-                                    <p>
-                                        Malaria confirmed by RDT?
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                        </div>
-                                    </p>
+                                    <p class="label">Malaria confirmed by RDT?</p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                    </div> 
                                 </div>
                                 <div class="form-group">
-                                    <p>
-                                        Parasitaemia estimated by microscopy?
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                        </div>
-                                    </p>
+                                    <p class="label">Parasitaemia estimated by microscopy?</p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                    </div>
                                 </div>
                                 <div class="form-group">
-                                    <p>
-                                        MMultiple samples from same patient?
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                        </div>
-                                    </p>
-                                </div>
+                                    <p class="label">Multiple samples from same patient?</p> 
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                    </div>
+                                </div>  
                                 <div class="form-group">
-                                    <p>
-                                        Samples collected using protocol we provide?2
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                        </div>
-                                    </p>
+                                    <p class="label">Samples collected using protocol we provide?</p>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                    </div>
                                 </div>
                             </div>
                             <!-- ALL SAMPLES -->
-                            <div id="tabAllSamples" class="tab tab--allSamples" data-tab="6">
-                                <h2>All Samples</h2>
+                            <div id="tabAllSamples" class="tab tab--allSamples" data-tab="5" data-title="All Samples">
                                 <p>Every sample submitted to the Sanger Malaria Programme for genetic analysis and to MalariaGEN Projects must: </p>
-                                <ul>
-                                    <li>Have been collected in accordance with good research practice</li>
-                                    <li>Have local ethics approval including appropriate informed consent</li>
-                                    <li>Have approval from other local stakeholders (e.g. the local institutional review body) where appropriate</li>
+                                <ul class="form-list">
+                                    <li class="form-listItem">Have been collected in accordance with good research practice</li>
+                                    <li class="form-listItem">Have local ethics approval including appropriate informed consent</li>
+                                    <li class="form-listItem">Have approval from other local stakeholders (e.g. the local institutional review body) where appropriate</li>
                                 </ul>
+                                <div class="form-group">
+                                    <label for="study_description" class="label">Ethics approval</label>
+                                    <div class="form-subGroup ">
+                                        <p>Please confirm that you will take responsibility for local ethics approval and for any other review processes that are required at the local level.</p>
+                                    </div>
+                                    <div class="form-subGroup">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="malaria-confirmed-dbs" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for=""malaria-confirmed-dbs"">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="malaria-confirmed-dbs" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for=""malaria-confirmed-dbs"">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group form-group--textArea">
+                                    <label for="study_description" class="label">Ethics approval details</label>
+                                    <p>Please provide details of the ethics Committees that approved the study and ethics approval number(s).</p>
+                                    <textarea name="study_description" id="" class="form-control" cols="30" rows="10"></textarea>
+                                </div>
+                                <p class="footNote">2, 3 A protocol for DBS collection is available on request and at https://www.malariagen.net/network/capacity-building/methods
+Every sample submitted to the Sanger Malaria Programme for genetic analysis and to MalariaGEN Projects must: 
+Be part of an approved partner study with a partner study reference code
+Be submitted with a complete Sample Manifest that provides collection date and location.</p>
+                                <div class="form-group">
+                                    <label for="study_description" class="label">Ethics approval</label>
+                                    <div class="form-subGroup ">
+                                        <p>Please confirm that you will take responsibility for local ethics approval and for any other review processes that are required at the local level.</p>
+                                    </div>
+                                    <div class="form-subGroup">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="malaria-confirmed-dbs" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for=""malaria-confirmed-dbs"">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="malaria-confirmed-dbs" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for=""malaria-confirmed-dbs"">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p id="help-samples" class="help">How will samples be used?</p>
+                                <p class="help-text">State-of-the-art genetic and genomic technologies will be used to genotype Parasite DNA - either extracted from venous blood or isolated from the finger-prick blood samples of confirmed malaria patients. The processes may include DNA extraction, genotyping, targeted sequencing, selective whole genome amplification, genome sequencing, and the downstream statistical and computational analysis of these data. When a partner study is approved, it is our intent to use our best efforts to achieve high quality data on each sample within the limitation of the quality and quantity of parasite DNA and our capacity which will change over time. </p>
                             </div>
+
+                            <!-- DATA RETURNED -->
+                            <div id="tabDataReturned" class="tab tab--dataReturned" data-tab="5" data-title="Data returned">
+                                <p>Data products providing sample level information that that may be produced and returned include:</p>
+                                <p><span>Genetic Report Card: </span>A user-friendly summary of the main findings for each sample including information on drug resistance markers and other information such as multiplicity of infection and markers of geographical origin. As research progresses, assays are iteratively improving as new relevant markers can be reliably incorporated. From the time a sample and completed manifest is received we aim to return the Genetic Report Card within 6-8 weeks.</p>
+                                <p><span>Whole Genome Data: </span>When the parasite DNA is of high enough quality and quantity and capacity allows a sample may be submitted for whole genome sequencing. Sequence read data is deposited at ENA immediately after sequencing. The timeline for this is dependent on external factors therefore while we aim to return data within 9 months of receiving samples with a completed sample manifest although this cannot be guaranteed. </p>
+                            </div>
+
+                            <!-- DATA PUBLISHED -->
+                            <div id="tabDataPublished" class="tab tab--dataPublished" data-tab="5" data-title="Data published">
+                                <p>Combined data from all partner studies will be used for two main purposes</p>
+                                <p><span>1. </span>To evaluate and develop the Spotmalaria methodology, e.g. (a) to determine the sensitivity and accuracy of this approach when applied to samples in the field; and (b) to develop a data report format and tools for data analysis that will be of practical utility for researchers working in the field and for control programmes.</p>
+                                <p><span>2. </span>To establish a prospective and systematic sampling framework for a global observatory that will provide open access information about how the parasite population is changing and evolving in different parts of the work, together with global analyses of drug resistance, malaria transmission and other factors relevant to malaria control and elimination.</p>
+                            </div>
+
+
                         </div>
                         <div class="form-footer">
                             <!-- NAVIGATION -->
                             <div class="navSubmit">
                                 <button id="prevBtn" type="button" class="btn navPrev" data-nav="-1">Previous</button>
                                 <button id="nextBtn" type="button" class="btn navNext" data-nav="1">Next</button>
-                                <input id="submitBtn" class="submitBtn" type="submit">
+                                <input id="submitBtn" class="submitBtn disabled" type="submit">
                             </div>
                         </div>
                     </div>
@@ -250,8 +312,8 @@
             </div>
         </div>
         <!-- FOOTER -->
-        <footer class="row row--footer">
-            <div class="col-md-8 offset-md-2">
+        <footer class="footer">
+            <div class="footer-container">
                 <div class="footer-info">
                     <h2>Key Information</h2>
                     <p>The Wellcome Sanger Institute (WSI) Parasites and Microbes Programme working through the MalariaGEN collaborative framework is committed to integrating genetic and epidemiological data to understand the evolutionary changes in malaria relevant genomes (human, parasite and vector) particularly in response to control measures. By partnering with research and public health programmes operating in endemic regions through the Spot Malaria Project we are committed to producing actionable knowledge for the purpose of controlling and eliminating malaria.</p>
