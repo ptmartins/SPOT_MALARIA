@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SPOT MALARIA</title>
     <link rel="stylesheet" href="reset.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,228 +15,235 @@
             <div class="col-md-8 offset-md-2">
                 <!-- FORM -->
                 <form class="formContainer">
-                    <!-- FORM-HEADER -->
-                    <div class="form-header">
-                        <h1 class="form-header-title">PARTNER STUDY PROPOSAL</h1>
-                        <img src="SpotMalaria-logo.jpg" class="form-header-logo" alt="Spot Malaria - logo" title="SPOT MALARIA">
-                    </div>
-                    <!-- FORM-BODY -->
-                    <div class="form-body">
-                        <!-- INTRO -->
-                        <div id="tabIntro" class="tab tab--intro" data-tab="0">
-                            <h2>Intro</h2>
-                            <p>Spot Malaria aims to bring together malaria genetics with epidemiological information across both time and space. The project has two distinct but complementary goals;
-                            <ul>
-                                <li>to simplify genetic data reporting so that more users are able to analyse and interpret the key features of their data, focusing on what is of most importance for field research and malaria control in a timely manner; </li>
-                                <li>and to create an open access global observatory across time and space for genetic variation and other relevant metadata such as malaria prevalence and deployment of control measures.</li>
-                            </ul>
-                            <p>This form is to capture the key information for a potential partner study for genetic analysis of P. falciparum or P. vivax samples as a basis for discussion about potential collaboration under the Spot Malaria umbrella.  For any questions, or to submit your completed forms, please contact <a href="email:support@malariagen.net">support@malariagen.net</a> 
-                            </p>
+                    <ul class="form-sideNav">
+                        <li class="sideNav-item folder" data-tab="0"><span>1. </span> Intro</li>
+                        <li class="sideNav-item folder" data-tab="1"><span>2. </span> People Information</li>
+                        <li class="sideNav-item folder" data-tab="2"><span>3. </span> Study information</li>
+                        <li class="sideNav-item folder" data-tab="3"><span>4. </span> Sample Information</li>
+                        <li class="sideNav-item folder" data-tab="4"><span>5. </span> X</li>
+                        <li class="sideNav-item folder" data-tab="5"><span>6. </span> Y</li>
+                        <li class="sideNav-item folder" data-tab="6"><span>7. </span> Z</li>
+                    </ul>   
+                    <div class="form-content">
+                        <!-- FORM-HEADER -->
+                        <div class="form-header">
+                            <h1 class="form-header-title">PARTNER STUDY PROPOSAL <span id="title-folder" class="title-folder"></span></h1>
                         </div>
-                        <!-- PEOPLE INFORMATION -->
-                        <div id="tabPeople" class="tab tab--people" data-tab="1">
-                            <div>
-                                <h2 class="formBlock-title">People Information</h2>
-                                <p class="formBlock-helpText">Please provide details of relevant stakeholders for this study. This information can be added to at a later stage.</p>
-                            </div>
-                            <h3>Main Contacts</h3>
-                            <!-- Lead Investigator -->
-                            <div class="form-group">
-                                <label for="lead_investigator_name" class="label">Lead Investigator Name</label>
-                                <input type="text" name="lead_investigator_name" placeholder="Name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="lead_investigator_affiliation">Lead Investigator Affiliation</label>
-                                <input type="text" name="lead_investigator_affiliation" placeholder="Affiliation" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="lead_investigator_email">Lead Investigator Email</label>
-                                <input type="email" name="lead_investigator_email" placeholder="Email" class="form-control">
-                            </div>
-                            <!-- Contact Person -->
-                            <div class="form-group">
-                                <label for="contact_person_name">Contact Person Name</label>
-                                <input type="text" name="contact_person_name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="contact_person_affiliation">Contact Person Affiliation</label>
-                                <input type="text" name="contact_person_affiliation" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="contact_person_email">Contact Person Email</label>
-                                <input type="email" name="contact_person_email" class="form-control">
-                            </div>
-                            <!-- Key Investigator -->
-                            <div class="form-group">
-                                <label for="key_investigator_name">Key Investigator Name</label>
-                                <input type="text" name="key_investigator_name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="key_investigator_role">Key Investigator role in study</label>
-                                <input type="text" name="key_investigator_role" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="key_investigator_affiliation">Key Investigator Affiliation</label>
-                                <input type="text" name="key_investigator_affiliation" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <label for="key_investigator_email">Key Investigator Email</label>
-                                <input type="email" name="key_investigator_email" class="form-control">
-                            </div>                
-                        </div>
-                        <!-- STUDY INFORMATION -->
-                        <div id="tabStudyInfo" class="tab tab--studyInfo" data-tab="2">
-                                <h2 class="formBlock-title">Study Information</h2>
-                                <p class="formBlock-helpText">Please provide details about the study that was conducted to generate the samples.</p>
-                            <div class="form-group">
-                                <label for="study_description">Study Title</label>
-                                <textarea name="study_description" id="" class="form-control" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
-                        <!-- SAMPLE INFORMATION INTRO -->
-                        <div id="tabSampleInfoIntro" class="tab tab--sampleInfoIntro" data-tab="3">
-                            <h2 class="formBlock-title">Sample Information</h2>
-                            <p class="formBlock-helpText">Please comple the relevant sections for your study.</p>
-                        </div>
-                        <!-- SAMPLE INFORMATION DBS-->
-                        <div id="tabSampleInfoDBS" class="tab tab--sampleInfoDBS" data-tab="4">
-                            <h2>Dried Blood Spots (DBS) collected from malaria cases</h2>
-                            <div class="form-group">
-                                <p>
-                                    Malaria confirmed by RDT?
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                    </div>
+                        <!-- FORM-BODY -->
+                        <div class="form-body">
+                            <!-- INTRO -->
+                            <div id="tabIntro" class="tab tab--intro" data-tab="0" data-title="Intro">
+                                <!-- <h2>Intro</h2> -->
+                                <p>Spot Malaria aims to bring together malaria genetics with epidemiological information across both time and space. The project has two distinct but complementary goals;
+                                <ul>
+                                    <li>to simplify genetic data reporting so that more users are able to analyse and interpret the key features of their data, focusing on what is of most importance for field research and malaria control in a timely manner; </li>
+                                    <li>and to create an open access global observatory across time and space for genetic variation and other relevant metadata such as malaria prevalence and deployment of control measures.</li>
+                                </ul>
+                                <p>This form is to capture the key information for a potential partner study for genetic analysis of P. falciparum or P. vivax samples as a basis for discussion about potential collaboration under the Spot Malaria umbrella.  For any questions, or to submit your completed forms, please contact <a href="email:support@malariagen.net">support@malariagen.net</a> 
                                 </p>
                             </div>
-                            <div class="form-group">
-                                <p>
-                                    Parasitaemia estimated by microscopy?
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                            <!-- PEOPLE INFORMATION -->
+                            <div id="tabPeople" class="tab tab--people" data-tab="1" data-title="People Information">
+                                <div>
+                                    <p class="formBlock-helpText">Please provide details of relevant stakeholders for this study. This information can be added to at a later stage.</p>
+                                </div>
+                                <!-- Lead Investigator -->
+                                <div class="form-group-wrapper">
+                                    <h2 class="section-title">Lead Investigator</h2>
+                                    <div class="form-group">
+                                        <label for="lead_investigator_name" class="label">Lead Investigator Name</label>
+                                        <input type="text" name="lead_investigator_name" placeholder="Name" class="form-control">
                                     </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                    <div class="form-group">
+                                        <label for="lead_investigator_affiliation" class="label">Lead Investigator Affiliation</label>
+                                        <input type="text" name="lead_investigator_affiliation" placeholder="Affiliation" class="form-control">
                                     </div>
-                                </p>
+                                    <div class="form-group">
+                                        <label for="lead_investigator_email" class="label">Lead Investigator Email</label>
+                                        <input type="email" name="lead_investigator_email" placeholder="Email" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Contact Person -->
+                                <div class="form-group-wrapper">
+                                    <h2 class="section-title">Contact person</h2>
+                                    <div class="form-group">
+                                        <label for="contact_person_name" class="label">Contact Person Name</label>
+                                        <input type="text" name="contact_person_name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact_person_affiliation" class="label">Contact Person Affiliation</label>
+                                        <input type="text" name="contact_person_affiliation" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact_person_email" class="label">Contact Person Email</label>
+                                        <input type="email" name="contact_person_email" class="form-control">
+                                    </div>
+                                </div>
+                                <!-- Key Investigator -->
+                                <div class="form-group-wrapper">
+                                    <h2 class="section-title">Key Investigator</h2>
+                                    <div class="form-group">
+                                        <label for="key_investigator_name" class="label">Key Investigator Name</label>
+                                        <input type="text" name="key_investigator_name" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="key_investigator_role" class="label">Key Investigator role in study</label>
+                                        <input type="text" name="key_investigator_role" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="key_investigator_affiliation" class="label">Key Investigator Affiliation</label>
+                                        <input type="text" name="key_investigator_affiliation" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="key_investigator_email" class="label">Key Investigator Email</label>
+                                        <input type="email" name="key_investigator_email" class="form-control">
+                                    </div>
+                                </div>                
                             </div>
-                            <div class="form-group">
-                                <p>
-                                    Multiple samples from same patient?
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                    </div>
-                                </p>
+                            <!-- STUDY INFORMATION -->
+                            <div id="tabStudyInfo" class="tab tab--studyInfo" data-tab="2" data-title="Study Information">
+                                    <!-- <h2 class="formBlock-title">Study Information</h2> -->
+                                    <p class="formBlock-helpText">Please provide details about the study that was conducted to generate the samples.</p>
+                                <div class="form-group">
+                                    <label for="study_description">Study Title</label>
+                                    <textarea name="study_description" id="" class="form-control" cols="30" rows="10"></textarea>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <p>
-                                    Samples collected using protocol we provide?
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                    </div>
-                                </p>
+                            <!-- SAMPLE INFORMATION INTRO -->
+                            <div id="tabSampleInfoIntro" class="tab tab--sampleInfoIntro" data-tab="3" data-title="Sample Information">
+                                <!-- <h2 class="formBlock-title">Sample Information</h2> -->
+                                <p class="formBlock-helpText">Please comple the relevant sections for your study.</p>
+                            </div>
+                            <!-- SAMPLE INFORMATION DBS-->
+                            <div id="tabSampleInfoDBS" class="tab tab--sampleInfoDBS" data-tab="4">
+                                <h2>Dried Blood Spots (DBS) collected from malaria cases</h2>
+                                <div class="form-group">
+                                    <p>
+                                        Malaria confirmed by RDT?
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        Parasitaemia estimated by microscopy?
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        Multiple samples from same patient?
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        Samples collected using protocol we provide?
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- SAMPLE INFORMATION PARASITE DNA-->
+                            <div id="tabSampleInfoDNA" class="tab tab--sampleInfoDNA" data-tab="5">
+                                <h2>Extracted Parasite DNA</h2>
+                                <div class="form-group">
+                                    <p>
+                                        Malaria confirmed by RDT?
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        Parasitaemia estimated by microscopy?
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        MMultiple samples from same patient?
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="form-group">
+                                    <p>
+                                        Samples collected using protocol we provide?2
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
+                                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
+                                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- ALL SAMPLES -->
+                            <div id="tabAllSamples" class="tab tab--allSamples" data-tab="6">
+                                <h2>All Samples</h2>
+                                <p>Every sample submitted to the Sanger Malaria Programme for genetic analysis and to MalariaGEN Projects must: </p>
+                                <ul>
+                                    <li>Have been collected in accordance with good research practice</li>
+                                    <li>Have local ethics approval including appropriate informed consent</li>
+                                    <li>Have approval from other local stakeholders (e.g. the local institutional review body) where appropriate</li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- SAMPLE INFORMATION PARASITE DNA-->
-                        <div id="tabSampleInfoDNA" class="tab tab--sampleInfoDNA" data-tab="5">
-                            <h2>Extracted Parasite DNA</h2>
-                            <div class="form-group">
-                                <p>
-                                    Malaria confirmed by RDT?
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                    </div>
-                                </p>
+                        <div class="form-footer">
+                            <!-- NAVIGATION -->
+                            <div class="navSubmit">
+                                <button id="prevBtn" type="button" class="btn navPrev" data-nav="-1">Previous</button>
+                                <button id="nextBtn" type="button" class="btn navNext" data-nav="1">Next</button>
+                                <input id="submitBtn" class="submitBtn" type="submit">
                             </div>
-                            <div class="form-group">
-                                <p>
-                                    Parasitaemia estimated by microscopy?
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                    </div>
-                                </p>
-                            </div>
-                            <div class="form-group">
-                                <p>
-                                    MMultiple samples from same patient?
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                    </div>
-                                </p>
-                            </div>
-                            <div class="form-group">
-                                <p>
-                                    Samples collected using protocol we provide?2
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="yes">
-                                        <label class="form-check-label" for="inlineCheckbox1">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="no">
-                                        <label class="form-check-label" for="inlineCheckbox2">No</label>
-                                    </div>
-                                </p>
-                            </div>
-                        </div>
-                        <!-- ALL SAMPLES -->
-                        <div id="tabAllSamples" class="tab tab--allSamples" data-tab="6">
-                            <h2>All Samples</h2>
-                            <p>Every sample submitted to the Sanger Malaria Programme for genetic analysis and to MalariaGEN Projects must: </p>
-                            <ul>
-                                <li>Have been collected in accordance with good research practice</li>
-                                <li>Have local ethics approval including appropriate informed consent</li>
-                                <li>Have approval from other local stakeholders (e.g. the local institutional review body) where appropriate</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="form-footer">
-                        <!-- STEPS -->
-                        <div class="steps">
-                            <span class="step" data-tab="0"></span>
-                            <span class="step" data-tab="1"></span>
-                            <span class="step" data-tab="2"></span>
-                            <span class="step" data-tab="3"></span>
-                            <span class="step" data-tab="4"></span>
-                            <span class="step" data-tab="5"></span>
-                            <span class="step" data-tab="6"></span>
-                        </div>
-                        <!-- NAVIGATION -->
-                        <div class="navSubmit">
-                            <button id="prevBtn" type="button" class="btn navPrev" data-nav="-1">Previous</button>
-                            <button id="nextBtn" type="button" class="btn navNext" data-nav="1">Next</button>
-                            <input id="submitBtn" class="submitBtn" type="submit">
                         </div>
                     </div>
                 </form>
@@ -257,9 +262,7 @@
         </footer>
 
         <!-- JS SCRIPTS -->
-        <!-- Bootstrap -->
         <script src="scripts.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </div>
 </body>
 </html>

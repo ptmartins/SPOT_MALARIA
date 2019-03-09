@@ -3,15 +3,16 @@
       nextBtn = document.getElementById('nextBtn'),
       submitBtn = document.getElementById('submitBtn'),
       tabs = document.getElementsByClassName('tab'),
-      dots = document.getElementsByClassName('step'),
+      folders = document.getElementsByClassName('folder'),
+      titleFolder = document.getElementById('title-folder'),
       currentTab = 0;
 
   showTab(currentTab);
 
-  for (var i = 0; i < dots.length; i++) {
-    dots[i].addEventListener('click', function () {
-      var tab = this.dataset.tab;
-      showTab(tab);
+  for (var i = 0; i < folders.length; i++) {
+    folders[i].addEventListener('click', function () {
+      var folder = this.dataset.tab;
+      showTab(folder);
     });
   }
 
@@ -27,6 +28,7 @@
 
   function showTab(tab) {
     hideTabs();
+    updateTitle(tab);
 
     if (tab === 0) {
       prevBtn.style.display = 'none';
@@ -43,15 +45,21 @@
     }
 
     tabs[tab].style.display = 'block';
-    dots[tab].classList.add('active');
+    folders[tab].classList.add('active');
+
+    currentTab = tab;
   }
 
   function hideTabs() {
     for (var i = 0; i < tabs.length; i++) {
       tabs[i].style.display = 'none';
-      dots[i].classList.remove('active');
+      folders[i].classList.remove('active');
     }
+  }
 
+  function updateTitle(tab) {
+    var tabTitle = tabs[tab].dataset.title;
+    titleFolder.innerText = "- " + tabTitle;
   }
 })();
 
