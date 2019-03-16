@@ -139,6 +139,34 @@ input[type="submit"].disabled {
     display: inline-block;
 }
 
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 12px;
+}
+
+.grid-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #dedede;
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.grid-cell {
+    border-bottom: 1px solid #8a8a8a;
+}
+
+.grid-cell ul {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.grid-cell li {
+    font-weight: normal;
+    font-size: 12px;
+}
+
 .container-main {
     display: flex;
     flex-direction: column;
@@ -259,6 +287,7 @@ input[type="submit"].disabled {
     overflow-y: auto; 
     flex-grow: 1;
     padding: 1rem;
+    font-size: 14px;
 }
 
 .tab {

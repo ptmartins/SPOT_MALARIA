@@ -295,6 +295,26 @@ Be submitted with a complete Sample Manifest that provides collection date and l
                                 <p>Combined data from all partner studies will be used for two main purposes</p>
                                 <p><span>1. </span>To evaluate and develop the Spotmalaria methodology, e.g. (a) to determine the sensitivity and accuracy of this approach when applied to samples in the field; and (b) to develop a data report format and tools for data analysis that will be of practical utility for researchers working in the field and for control programmes.</p>
                                 <p><span>2. </span>To establish a prospective and systematic sampling framework for a global observatory that will provide open access information about how the parasite population is changing and evolving in different parts of the work, together with global analyses of drug resistance, malaria transmission and other factors relevant to malaria control and elimination.</p>
+                                <div class="form-grid">
+                                    <div class="grid-title">Product</div>
+                                    <div class="grid-title">Mechanism for Release</div>
+                                    <div class="grid-title">Timeline and restrictions on use</div>
+                                    <div class="grid-cell">
+                                        <ul> Partner Study Description
+                                            <li class="">Lead Investigator</li>
+                                            <li class="">Contact Person with contact details</li>
+                                            <li class="">Study Site Information</li>
+                                        </ul>
+                                    </div>
+                                    <div class="grid-cell">MalariaGen website</div>
+                                    <div class="grid-cell">When a data product arising from the partner study has been shared publically</div>
+                                    <div class="grid-cell">Sequence Read Data</div>
+                                    <div class="grid-cell">MDeposited in European Nucleotide Archive (ENA)</div>
+                                    <div class="grid-cell">Immediate open access in line with Sanger Institute policy</div>
+                                    <div class="grid-cell">Genetic Report Card Whole Genome Data</div>
+                                    <div class="grid-cell">MalariaGEN website</div>
+                                    <div class="grid-cell">As soon as possible and not later than 6 months after returning to partners</div>
+                                </div>
                             </div>
 
 

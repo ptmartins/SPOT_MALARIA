@@ -12,7 +12,7 @@
 
   for (var i = 0; i < folders.length; i++) {
     folders[i].addEventListener('click', function () {
-      var folder = this.dataset.tab;
+      var folder = parseInt(this.dataset.tab);
       showTab(folder);
     });
   }
@@ -58,6 +58,8 @@
     folders[tab].classList.add('active');
 
     currentTab = tab;
+
+    console.log(currentTab);
   }
 
   function hideTabs() {
